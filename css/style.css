@@ -145,12 +145,16 @@ li:hover{
     width: 270px;
     background-color: #d5f9ba;
     border-radius: 0.85rem;
-    padding: 0.45rem 1rem;
+    padding: 0.45rem 0.55rem;
 }
 .message-speaker{
     background-color: white;
 }
 .message-speaker span{
+    margin-top: 1rem;
+    font-size: 0.55rem;
+}
+.message-user span{
     margin-top: 1rem;
     font-size: 0.55rem;
 }
