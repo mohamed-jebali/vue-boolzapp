@@ -45,10 +45,18 @@
                             </div>
                         </div>
                         <div class="searchbar-list">
-
+                            <div class="search px-2 d-flex align-items-center">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input class="form-control" type="search" placeholder="Cerca o inzia una nuova chat" aria-label="Search">
+                            </div>
                         </div>
                         <div class="contacts">
-                            
+                            <ul>
+                                <li v-for="(elements,index) in contacts">
+                                        <img class="img-fluid rounded-circle" :src="contacts[index].avatar" alt="img-avatar-1">
+                                    {{ elements.name }}
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

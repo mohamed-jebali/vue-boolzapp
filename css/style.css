@@ -35,6 +35,12 @@ body{
     width: calc(100% - 400px);
 }
 
+ul li{
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #b1afaf;
+
+}
+
 .icon-container{
     width: 50px;
     height: 50px;
@@ -100,4 +106,21 @@ body{
 .chat-container .grey-bar i{
     color: #6b7173;
     font-size: 1.2rem;
+}
+.searchbar-list{
+    padding: 0.5rem 0.5rem;
+    background-color: #f9f9f9;
+}
+.search{
+    width: 100%;
+    border: 1px solid #b1afaf;
+}
+.search i{
+    margin-left: 0.5rem;
+    margin-right: 1.2rem;
+    color: #b1afaf;
+}
+.search input{
+    border: none;
+    background-color: #f9f9f9;
 }
