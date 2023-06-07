@@ -109,7 +109,8 @@ li:hover{
     height: 50px;
     font-size: 1.2rem;
 }
-.text-notification{
+.text-notification p{
+    width: 300px;
     font-size: 0.8rem;
 }
 .text-notification a{
