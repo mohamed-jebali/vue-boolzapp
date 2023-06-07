@@ -40,10 +40,13 @@ ul{
 }
 
 ul li{
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid #b1afaf;
     list-style-type: none;
 
+}
+li:hover{
+    background-color: #e9ebeb;
 }
 
 .icon-container{
@@ -132,4 +135,8 @@ ul li{
 }
 .contacts{
     font-size: 0.8rem;
+}
+.text-item{
+    width: 100%;
+    padding: 0 0.55rem;
 }
