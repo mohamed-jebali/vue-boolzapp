@@ -52,9 +52,16 @@
                         </div>
                         <div class="contacts">
                             <ul>
-                                <li v-for="(elements,index) in contacts">
+                                <li v-for="(elements,index) in contacts" class="d-flex align-items-center">
+                                    <div class="icon-container">
                                         <img class="img-fluid rounded-circle" :src="contacts[index].avatar" alt="img-avatar-1">
-                                    {{ elements.name }}
+                                    </div>
+                                    <span class="ms-3 fw-semibold">
+                                        {{ elements.name }}<br>
+                                     <span class="fw-normal text-secondary">
+                                            Ultimo messagio inviato
+                                        </span>
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -66,7 +73,7 @@
                         <div class="icon-container d-flex align-items-center">
                             <img class="img-fluid rounded-circle" src="./img/avatar_1.jpg" alt="img-avatar-1">
                             <span class="ps-2">Mohamed</span>
-                            <!-- <span class="ps-2">Ultimo accesso oggi alle 12:00</span> -->
+                            <span class="ps-2">Ultimo accesso oggi alle 12:00</span>
                         </div>
                         <div class="icon-container-top d-flex align-items-center">
                             <i class="fa-solid fa-magnifying-glass"></i>
