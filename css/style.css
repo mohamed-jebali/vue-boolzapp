@@ -39,6 +39,9 @@ body{
     width: 50px;
     height: 50px;
 }
+.icon-container-top i{
+    margin-right: 1rem;
+}
 
 .icons-chat-container i{
     color: #b1afaf;
@@ -60,13 +63,41 @@ body{
     overflow: scroll;
 }
 
+.chat-container :nth-child()
+
 .list-contacts{
     height: calc(100vh - 70px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar .grey-bar{
     position: fixed;
+    height: 70px;
     width: 400px;
     z-index: 1;
     padding: 0 .5rem;
+}
+.notification{
+    margin-top: 4.3rem;
+    background-color: #8edafc;
+    width: 100%;
+    height: 70px;
+}
+.notification i{
+    background-color: white;
+    border-radius: 50%;
+    color: #8edafc;
+    padding: 0.8rem;
+    font-size: 1.3rem;
+}
+.search-bar{
+    width: 100%;
+    margin: 0 1.3rem;
+}
+
+.chat-container .grey-bar i{
+    color: #6b7173;
+    font-size: 1.2rem;
 }
