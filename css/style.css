@@ -14,7 +14,6 @@ body{
 
 .main-container{
     margin: auto;
-    background-color: aquamarine;
     margin-top: -6rem;
     height: 680px;
     width: 80%;
@@ -57,10 +56,17 @@ body{
 
 .sidebar{
     background-color: white;
-    height: 100%;
     width: 400px;
+    overflow: scroll;
+}
+
+.list-contacts{
+    height: calc(100vh - 70px);
 }
 
 .sidebar .grey-bar{
+    position: fixed;
+    width: 400px;
+    z-index: 1;
     padding: 0 .5rem;
 }
