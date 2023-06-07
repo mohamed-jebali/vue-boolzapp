@@ -14,24 +14,31 @@ body{
 .main-container{
     margin: auto;
     background-color: aquamarine;
-    margin-top: -5rem;
+    margin-top: -6rem;
     height: 680px;
     width: 80%;
     z-index: 1;
 }
 
 .chat-container{
+    background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     background-color: aqua;
     width: calc(100% - 400px);
 }
-.top-bar{
+.chat-container .grey-bar{
+    border-left: 1px solid #b1afaf;
+}
+.grey-bar{
     height: 70px;
-    background-color: #dbdbd2;
+    background-color: #eaeaea;
 }
 
 .sidebar{
-    background-color: black;
+    background-color: white;
     height: 100%;
     width: 400px;
 }
