@@ -93,12 +93,12 @@
                         </div>
                     </div>
                     <div class="main-chat p-5 d-flex flex-column align-items-end">
-                        <p class="message-user d-flex justify-content-between align-items-center" v-for="(elements,index) in contacts[activeIndex].messages">
+                        <p class="d-flex justify-content-between align-items-center" :class="contacts.status === 'received' ? 'message-speaker' : 'message-user'" v-for="(elements, index) in contacts[activeIndex].messages">
                             {{ elements.message }}
                             <span class="text-secondary align-self-end">
-                                {{ elements.date.substring(10,16) }}
+                              {{ elements.date.substring(10, 16) }}
                             </span>
-                        </p>
+                          </p>                          
                         <!-- <p class="message-speaker align-self-start d-flex justify-content-between align-items-center" v-for="(elements,index) in contacts[activeIndex].messages">
                             {{ elements.message }}
                             <span class="text-secondary align-self-end">
