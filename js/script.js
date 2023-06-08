@@ -171,15 +171,13 @@ createApp({
                         }
                     ],
                 }
-            ]
-            
+            ],
+            clickChatActive : false,
         };
       },
   methods:{
-    isVisible (){
-        if(visible === true){
-
-        }
-    }
+    activeContact(index) {
+        this.clickChatActive = index;
+      }
   },
 }).mount('#app')
