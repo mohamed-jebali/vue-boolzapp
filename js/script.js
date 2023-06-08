@@ -183,7 +183,8 @@ createApp({
       },
       addToChat(){
         if(this.newElement !== ""){
-        this.messages.push({message: this.newElement,status:"sent"});
+        this.contacts[this.activeIndex].messages.push({message: this.newElement,date: '10/01/2020 15:51:00',status:"sent"});
+        console.log(this.contacts);
         this.newElement = "";
       }
     },
