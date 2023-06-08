@@ -173,11 +173,12 @@ createApp({
                 }
             ],
             clickChatActive : false,
+            activeIndex: 0,
         };
       },
   methods:{
     activeContact(index) {
-        this.clickChatActive = index;
+        this.activeIndex = index;
       }
   },
 }).mount('#app')

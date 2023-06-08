@@ -29,7 +29,7 @@
                             <img class="img-fluid rounded-circle" src="./img/avatar_1.jpg" alt="img-avatar-1">
                             <span class="ps-2">User</span>
                         </div>
-                        <div class="icons-chat-container">
+                        <div class="icons-chat-container" @click="activeContact">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="chat-container" v-if="clickChatActive !== false">
+                <div class="chat-container" v-if="activeContact !== false">
                     <!-- TOP GREY BAR -->
                     <div class="grey-bar d-flex  align-items-center px-2 justify-content-between">
                         <div class="icon-container d-flex">
@@ -93,18 +93,18 @@
                         </div>
                     </div>
                     <div class="main-chat p-5 d-flex flex-column align-items-end">
-                        <p class="message-user d-flex justify-content-between align-items-center" v-for="(elements,index) in messages">
+                        <p class="message-user d-flex justify-content-between align-items-center" v-for="(elements,index) in contacts[activeIndex].messages">
                             {{ elements.message }}
                             <span class="text-secondary align-self-end">
                                 {{ elements.date.substring(10,16) }}
                             </span>
                         </p>
-                        <p class="message-speaker align-self-start d-flex justify-content-between align-items-center"  v-for="(elements,index) in messages">
+                        <!-- <p class="message-speaker align-self-start d-flex justify-content-between align-items-center" v-for="(elements,index) in contacts[activeIndex].messages">
                             {{ elements.message }}
                             <span class="text-secondary align-self-end">
                                 {{ elements.date.substring(10,16) }}
                             </span>
-                        </p>
+                        </p> -->
                     </div>
                     <!-- BOTTOM GREY BAR -->
                     <div class="grey-bar d-flex  align-items-center px-4">
