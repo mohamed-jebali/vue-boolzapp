@@ -174,11 +174,18 @@ createApp({
             ],
             clickChatActive : false,
             activeIndex: 0,
+            newElement: "",
         };
       },
   methods:{
     activeContact(index) {
         this.activeIndex = index;
+      },
+      addToChat(){
+        if(this.newElement !== ""){
+        this.messages.push({message: this.newElement,status:"sent"});
+        this.newElement = "";
       }
+    },
   },
 }).mount('#app')

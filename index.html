@@ -104,7 +104,7 @@
                     <div class="grey-bar d-flex  align-items-center px-4">
                         <i class="fa-regular fa-face-smile"></i>
                         <div class="search-bar">
-                            <input class="form-control" type="search" placeholder="Scrivi un messagio" aria-label="Search">
+                            <input class="form-control" type="search" placeholder="Scrivi un messagio" aria-label="Search" v-model="newElement" @keydown.enter="addToChat">
                         </div>
                         <i class="fa-solid fa-microphone"></i>
                     </div>
