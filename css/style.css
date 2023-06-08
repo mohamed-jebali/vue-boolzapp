@@ -152,6 +152,7 @@ li:hover{
 }
 .message-speaker{
     background-color: white;
+    align-self: flex-start;
 }
 .message-speaker span{
     margin-top: 1rem;
