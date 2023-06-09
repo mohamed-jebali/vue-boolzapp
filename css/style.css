@@ -167,3 +167,10 @@ li:hover{
     font-size: 0.8rem;
     width: 400px;
 }
+.messages-info{
+    background-color: white;
+    width: 150px;
+}
+.messages-info li a{
+    margin-left: 1rem;
+}
