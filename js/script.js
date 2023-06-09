@@ -1,3 +1,6 @@
+// Milestone 4
+// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
 
 const { createApp } = Vue
 
@@ -173,6 +176,7 @@ createApp({
             timer : 0,
             autoplay:false,
             showMessageOk:false,
+            search: "",
         };
       },
   methods:{
@@ -190,5 +194,16 @@ createApp({
           }, 1000);
       }
     },
+    filteredList() {
+        return contacts.filter((contacts) =>
+          contacts.toLowerCase().includes(input.value.toLowerCase())
+        );
+      }
   },
 }).mount('#app')
+
+function filteredList() {
+    return contacts.filter((name) =>
+      name.toLowerCase().includes(search.value.toLowerCase())
+    );
+  }
