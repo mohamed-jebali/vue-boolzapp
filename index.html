@@ -94,18 +94,17 @@
                         </div>
                     </div>
                     <div class="main-chat p-5 d-flex flex-column align-items-end">
-                        <p class="d-flex justify-content-between align-items-center" :class="elements.status === 'sent' ? 'message-user' : 'message-speaker'" v-for="(elements, index) in contacts[activeIndex].messages">
+                        <p class="d-flex justify-content-between align-items-center" :class="elements.status === 'sent' ? 'message-user' : 'message-speaker'" v-for="(elements, index) in contacts[activeIndex].messages" @click="toggle">
                             <a class="text-decoration-none text-dark">
                                 {{ elements.message }}
                               </a>                            
                             <span class="text-secondary align-self-end">
                               {{ elements.date.substring(10, 16) }}
                             </span>
-                            <ul class="messages-info d-none" v-if="contacts[activeIndex].visible">
+                            <ul class="messages-info" v-if="active">
                                 <li><a class="dropdown-item" href="#">Message info</a></li>
-                                <li><a class="dropdown-item" @click="remove(index)" href="#">Delete message</a></li>
-                              </ul>
-                              
+                                <li><a class="dropdown-item" @click="remove(elements)" href="#">Delete message</a></li>
+                            </ul>                              
                           </p>           
                     </div>
                     <!-- BOTTOM GREY BAR -->

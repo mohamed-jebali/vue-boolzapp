@@ -180,11 +180,13 @@ createApp({
             autoplay:false,
             showMessageOk:false,
             search: "",
+            active: false
         };
       },
   methods:{
     activeContact(index) {
         this.activeIndex = index;
+        this.showDropdown = false; 
       },
       addToChat(){
         if(this.newElement !== ""){
@@ -204,6 +206,9 @@ createApp({
       },
       remove(element){
         this.contacts[this.activeIndex].messages.splice(element,1);
+      },
+      toggle () {
+        this.active = !this.active
       },
   },
 }).mount('#app')
