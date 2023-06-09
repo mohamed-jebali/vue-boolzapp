@@ -201,6 +201,9 @@ createApp({
         return this.contacts.filter((element) =>{
         return element.name.toLowerCase().includes(this.search);
     });
-      }
+      },
+      remove(element){
+        this.contacts[this.activeIndex].messages.splice(element,1);
+      },
   },
 }).mount('#app')
