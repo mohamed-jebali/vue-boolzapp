@@ -195,15 +195,9 @@ createApp({
       }
     },
     filteredList() {
-        return contacts.filter((contacts) =>
-          contacts.toLowerCase().includes(input.value.toLowerCase())
-        );
+        return this.contacts.filter((element) =>{
+        return element.name.LowerCase().includes(this.search);
+    });
       }
   },
 }).mount('#app')
-
-function filteredList() {
-    return contacts.filter((name) =>
-      name.toLowerCase().includes(search.value.toLowerCase())
-    );
-  }
