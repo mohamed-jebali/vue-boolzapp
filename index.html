@@ -80,9 +80,9 @@
                     <!-- TOP GREY BAR -->
                     <div class="grey-bar d-flex  align-items-center px-2 justify-content-between">
                         <div class="icon-container d-flex">
-                            <img class="img-fluid rounded-circle" src="./img/avatar_1.jpg" alt="img-avatar-1">
+                            <img class="img-fluid rounded-circle" :src="contacts[activeIndex].avatar" alt="img-avatar-1">
                         <div class="ps-2 pt-1">
-                                <p class="mb-0">Michele</p>
+                                <p class="mb-0">{{contacts[activeIndex].name}}</p>
                                 <p class="text-secondary mb-0 user-name">Ultimo accesso oggi alle 12:00</p>
                         </div>
                         </div>
