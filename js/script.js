@@ -1,8 +1,3 @@
-// Milestone 2
-// Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-// Click sul contatto mostra la conversazione del contatto cliccato
-
-
 
 const { createApp } = Vue
 
@@ -175,6 +170,9 @@ createApp({
             clickChatActive : false,
             activeIndex: 0,
             newElement: "",
+            timer : 0,
+            autoplay:false,
+            showMessageOk:false,
         };
       },
   methods:{
@@ -184,8 +182,12 @@ createApp({
       addToChat(){
         if(this.newElement !== ""){
         this.contacts[this.activeIndex].messages.push({message: this.newElement,date: '10/01/2020 15:51:00',status:"sent"});
-        console.log(this.contacts);
         this.newElement = "";
+        setTimeout(() => {
+            this.contacts[this.activeIndex].messages.push({message: "Ok",date: '10/01/2020 15:51:00',status:"received"});
+            this.autoplay = true;
+            this.showMessageOk = false;
+          }, 1000);
       }
     },
   },
