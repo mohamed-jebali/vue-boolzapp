@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="main-chat p-5 d-flex flex-column align-items-end">
-                        <p class="d-flex justify-content-between align-items-center" :class="elements.status === 'sent' ? 'message-user' : 'message-speaker'" v-for="(elements, index) in contacts[activeIndex].messages" @click="toggle">
+                        <p class="d-flex justify-content-between align-items-center" :class="elements.status === 'sent' ? 'message-user' : 'message-speaker'" v-for="(elements, index) in contacts[activeIndex].messages" @click="toggle" v-bind="selection">
                             <a class="text-decoration-none text-dark">
                                 {{ elements.message }}
                               </a>                            
@@ -103,8 +103,8 @@
                             </span>
                             <ul class="messages-info" v-if="active">
                                 <li><a class="dropdown-item" href="#">Message info</a></li>
-                                <li><a class="dropdown-item" @click="remove(elements)" href="#">Delete message</a></li>
-                            </ul>                              
+                                <li><a class="dropdown-item" @click="remove(elements)" href="#">Delete message</a>
+                            </ul>           
                           </p>           
                     </div>
                     <!-- BOTTOM GREY BAR -->
@@ -121,7 +121,6 @@
         </div>
     </div>
     
-
     <script src="./js/script.js"></script>
 </body>
 </html>

@@ -180,7 +180,8 @@ createApp({
             autoplay:false,
             showMessageOk:false,
             search: "",
-            active: false
+            active: false,
+            selectedMessage: false,
         };
       },
   methods:{
@@ -190,10 +191,10 @@ createApp({
       },
       addToChat(){
         if(this.newElement !== ""){
-        this.contacts[this.activeIndex].messages.push({message: this.newElement,date: '10/01/2020 15:51:00',status:"sent"});
+        this.contacts[this.activeIndex].messages.push({message: this.newElement,date: this.currentDate(),status:"sent"});
         this.newElement = "";
         setTimeout(() => {
-            this.contacts[this.activeIndex].messages.push({message: "Ok",date: '10/01/2020 15:51:00',status:"received"});
+            this.contacts[this.activeIndex].messages.push({message: "Ok",date: this.currentDate(),status:"received"});
             this.autoplay = true;
             this.showMessageOk = false;
           }, 1000);
@@ -201,14 +202,37 @@ createApp({
     },
     filteredList() {
         return this.contacts.filter((element) =>{
-        return element.name.toLowerCase().includes(this.search);
+        return element.name.toLowerCase().includes(this.search.toLowerCase());
     });
       },
-      remove(element){
-        this.contacts[this.activeIndex].messages.splice(element,1);
+      remove(messageIndex){
+        this.contacts[this.activeIndex].messages.splice(messageIndex,1);
       },
       toggle () {
         this.active = !this.active
       },
+      selection(payload){
+        this.active = payload
+      },
+      currentDate(){
+        let nowDate = new Date();
+        let day = nowDate.getDate();
+        let month = nowDate.getDate();
+        let year = nowDate.getFullYear();
+        let hour = nowDate.getHours();
+        let minute = nowDate.getMinutes();
+        let second = nowDate.getSeconds();
+
+        if(hour < 10){
+            hour = "0" + hour
+        }
+
+        if(minute < 10){
+            minute = "0" + minute
+        }
+                
+        let dateChat = `${day}/${month}/${year}` + ' ' + `${hour}:${minute}:${second}`;
+        return dateChat
+    }
   },
 }).mount('#app')
